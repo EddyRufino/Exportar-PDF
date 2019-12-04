@@ -2,13 +2,15 @@
 
 Route::get('/', function () {
 
-	return view('files.index');
-    // return view('welcome');
+	// return view('files.index');
+    return view('welcome');
 
     // para ver la vista del PDF
     // $pdf = PDF::loadView('welcome');
     // return $pdf->stream();
 });
+
+Route::resource('codes', 'CodeController');
 
 Route::resource('file', 'FileController');
 
